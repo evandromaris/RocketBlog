@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --purple-bg: #290742;
+    --dark-bg: #170027;
+    --button-bg: #9e6dc2;
+    --white: #fff;
+    --light-purple: #fbf6ff;
+    --green: #4fff4b;
+    --hr-gray: #F2E7FA;
+    --font-14px: 0.875rem;
+    --font-18px: 1.125rem;
+    --font-16px: 1rem;
+    --font-24px: 1.5rem;
+    --font-36px: 2.25rem;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "home home home"
+    "main main main"
+    "footer footer footer";
+    grid-template-rows: auto auto auto ;
+    grid-template-columns: auto auto auto;   
+}
+
+h2{
+    font: 700 var(--font-24px) var(--font-poppins);
+    color: var(--purple-bg);
+}
+
+p{
+    font: var(--font-16px) var(--font-roboto);
+    line-height: 1.6;
+}
+
+/*inicio do conteudo do topo*/
+.home{
+    grid-area: home;
+    background-color: var(--purple-bg);
+    padding: 4rem 0;
+    border-bottom: 6px solid var(--green);    
+}
+
+.home header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+    color: var(--light-purple);
+    
+}
+
+.home header .logo-menu-mobile .menu-mobile{
+    display: none;
+}
+
+.home header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+}
+
+.home header  nav ul li a{
+    text-decoration: none;
+    color: var(--light-purple);
+    font: var(--font-18px) var(--font-roboto);
+}
+.home header  nav ul li a:focus{
+    border-left: 3px solid var(--green);
+    padding-left: 2px;
+    font-weight: 700;
+}
+
+.home header form {
+    display: flex;
+    height: 2.75rem;    
+}
+
+.home header form input{
+    background-color: #170027;
+    border: 0 none;
+    width: 14.375rem;
+    outline: 0;
+    border-radius: .3rem 0 0 .3rem;
+    box-shadow: 0 1px 5px var(--dark-bg);
+    padding-left: 20px;
+    box-sizing: border-box;
+    color: var(--light-purple);
+}
+
+.home header form button{
+    width: 4.375rem;
+    background-color: #9e6dc2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 .3rem .3rem 0;
+    border: 0 none;
+    box-shadow: 0 1px 5px var(--dark-bg);
+    cursor: pointer;
+}
+
+.home .info-home{
+    display: flex;
+    justify-content: center;
+    gap: 5.8rem;
+    margin-top: 4rem;    
+}
+
+.home .info-home section{
+    display: flex;
+    flex-direction: column;
+    width: 35.625rem;
+    gap: 1.5rem;
+}
+
+.home .info-home section h1{
+    font: 700 var(--font-36px) var(--font-poppins);
+    color: var(--button-bg);
+}
+
+.home .info-home section p{
+    font: var(--font-18px) var(--font-roboto);
+    color: var(--light-purple);
+    width: 29.313rem;
+    line-height: 1.688;
+}
+
+.home .info-home section .more{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.home .info-home section .more a{
+    text-decoration: none;
+    color: var(--button-bg);
+    font: 700 var(--font-18px) var(--font-roboto);
+}
+/*fim do conteúdo do topo*/
+
+/*inicio do conteúdo principal*/
+main{
+    grid-area: main;
+    background-color: var(--light-purple);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem 0;
+    padding: 4rem;
+
+}
+
+main .main-articles{
+    display: flex;
+    justify-content: center;
+    gap: 12.5rem;
+    
+}
+
+main .main-articles .post1{
+    width: 35.563rem;
+}
+
+hr{
+    border: 0 none;
+    border-top: 2px solid var(--hr-gray);
+}
+
+main .main-articles .post1 article, 
+main .main-articles .others article, main .posts article{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .main-articles .others {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 29.5rem;
+}
+
+main .posts{
+    display: flex;
+    justify-content: center;
+    gap: 4.2rem;
+}
+
+main .posts article{
+    width: 23.125rem;
+}
+/*Fim do conteúdo principal*/
+
+/*inicio do rodapé*/
+footer{
+    grid-area: footer;
+    background-color: var(--dark-bg);
+    padding: 4rem 0 0 0;
+    border-top: 6px solid var(--button-bg);
+    text-align: center;
+}
+
+footer .content-footer{
+    display: flex;
+    justify-content: center;
+    gap: 18.2rem;
+    align-items: center;
+}
+
+footer .content-footer .company{
+    display: flex;
+    gap: 8rem;
+}
+
+footer .content-footer .company ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: start;
+    gap: .5rem;
+}
+
+footer .content-footer li, footer .content-footer .company ul li a{
+    text-decoration: none;
+    color: var(--light-purple);
+    font: var(--font-16px) var(--font-poppins);
+}
+
+footer .content-footer .company li:hover, footer .content-footer .company ul li a:hover{
+    color: var(--button-bg);
+    cursor: pointer;
+}
+
+footer .content-footer .social ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+footer .content-footer .social ul li a:hover{
+    border-bottom: 2px solid var(--green);
+}
+
+footer .content-footer .social ul li a svg:hover{
+    stroke: var(--button-bg);
+}
+
+footer p{
+    padding: 0;
+    margin: 3rem 0 1rem 0;
+    color: var(--light-purple);
+    opacity: 50%;
+    font: 0.75rem var(--font-roboto);
+}
+/* fim do rodapé*/
+
+/*inicio do layout mobile*/
+
+@media only screen and (max-width: 1000px){
+
+    body{
+        display: grid;
+        grid-template-columns: 350px;
+    }
+
+    p{
+        font-size: var(--font-14px);
+    }
+
+    h1{
+        font-size: var(--font-24px);
+    }
+
+    h2{
+        font-size: var(--font-18px);
+    }
+
+    .home{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        
+    } 
+
+    .home header{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .home header .logo-menu-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .home header .logo-menu-mobile .menu-mobile{
+        display: block;
+        position: relative;
+        top: 1rem;
+        right: 5rem;
+        width: 2.5rem;
+        box-sizing: border-box;
+    }
+
+    .home header .logo{
+        margin-top: 2rem;
+        width: 100px;
+    }
+
+    .home nav {
+        display: none;
+    }
+
+    .home .info-home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home .info-home section{
+        width: 350px;
+        margin-top: -2rem;
+    }
+
+    .home .info-home section p{
+        width: 350px;
+        text-align: center;
+       
+    }
+
+    .home .info-home section .more{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .home .info-home section .more img{
+        display: block;
+    }
+
+    .home .info-home img {
+        display: none;
+    }
+  
+    main{
+        width: 100vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        padding-bottom: 2rem;
+    }
+
+    main .main-articles {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+        margin: 2rem auto;
+    }
+
+    main .main-articles .post1{
+        width: 350px;
+        border-bottom: 2px solid var(--hr-gray);
+    }
+    main .main-articles .post1{
+        padding-bottom: 2rem;
+    }
+
+    main .main-articles .others{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        border-bottom: 2px solid var(--hr-gray);
+        padding-bottom: 2rem;
+    }
+
+   
+
+    main .posts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+
+    footer{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        
+    }
+
+    footer .logo{
+        width: 100px;
+    }
+
+    footer .content-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
